@@ -1,0 +1,55 @@
+h2 {
+    text-align: center;
+    margin: 100px;
+}
+.calculadora {
+    width: 300px; /*Tamanho da aréa*/
+    background-color: #E6B797; /*Cor de fundo*/
+    border: 1px solid #ccc; /*Borda*/
+    padding: 100px; /*Espaçamento do elemento*/
+    border-radius: 5px; /*curvatura da borda*/
+    margin: 100px auto; /*(Auto: centralizar um elemento horizontalmente) 0 margem superior e inferior do elemento como zero*/
+}
+
+#resultado {
+    width: 80%;
+    font-size: 100%;
+    text-align: left;
+    margin-bottom: 10px; /*distância vertical entre a borda inferior do elemento e a borda superior do próximo elemento abaixo dele*/
+    box-sizing: border-box; /*(box-sizing:determina como o tamanho total de um elemento)  border-box:tamanho total do elemento inclui o conteúdo, mas não o preenchimento e a borda*/
+    border: none;
+    border-radius: 3px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    gap: 10px;
+}
+
+button {
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #fff;
+  }
+
+  .operator {
+    background-color: #f4f4f4;
+  }
+  
+  .clear {
+    background-color: #ff6b6b;
+    color: #fff;
+  }
+  
+  .calculate {
+    background-color: #7bed9f;
+    color: #fff;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }

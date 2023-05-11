@@ -1,0 +1,84 @@
+*{
+  padding: 0; /*espaço interno de um elemento*/
+  margin: 0; /*espaço externo de um elemento*/
+  box-sizing: border-box; /*neste valor, o tamanho total do elemento inclui o conteúdo, mas não o preenchimento e a borda*/
+  font-family: Arial, Helvetica, sans-serif;
+} /*Estilização geral geralmente colocar */
+
+body {
+  background-color: #333;
+  display: flex; /*criar layouts flexíveis e responsivos, onde os elementos dentro de um contêiner podem ser facilmente organizados em diferentes tamanhos e posições.*/
+  align-items: center;
+  justify-content: center; /* justify-content:para alinhar os itens horizontalmente no contêiner.*/
+  padding: 9em;
+}
+
+#calc {
+  width: 400px; /*Ela define o espaço horizontal ocupado por um elemento na página*/
+  padding: 0.5em; /*Tamanho do elemento da calculadora(Tamanho externo, molde)*/
+  background-color: #c4c4c4; /*Cor externa da calculadora*/
+  color: #000;
+  display: flex; /*deixou os botões proximos*/ 
+  flex-direction: column; /*Deixou os botões em colunas*/
+
+}
+
+#calc h3 {
+  font-size: 0.8em; /*Deixou a letra menor*/
+  font-weight: 300; /*Fonte em negrito foi diminuido*/
+  color: #667; /*Tonalidade apagada para o nome*/
+}
+
+#operation {
+  text-align: right; /*alinhamento a direita*/
+}
+
+#previous-operation,
+#current-operation {
+  padding: 0.2em; /*alinhamento do elemento interno(Onde mostra o valor digitado pelo usuário)*/
+  overflow-wrap: break-word; /*Quebra de linha caso o número seja muito grande*/
+  min-height: 1.6em; /* elemento for maior que a altura mínima definida, a altura do elemento será ajustada para acomodar o conteúdo*/
+}
+
+#previous-operation {
+  color: #777;/*Cor de fundo do resultado*/
+}
+
+#current-operation{
+  font-size: 3em; /*Tamanho da fonto do valor digitado*/
+  font-weight: 700; /*Número em negrito*/
+}
+
+#buttons-container {
+  display: grid; /*dividir a área em colunas e linhas e posicionar os elementos HTML em qualquer célula da grade*/
+  grid-template-columns: 1fr 1fr 1fr 1fr; /*Deixando os botoões em coluna*/
+  gap: 3px; /*Separeção dos botões*/
+}
+
+#buttons-container button {
+  border: 10px solid transparent; /*Bordas transparentes do elemento botão*/
+  border-radius: 50px; /*Borda do botão*/
+  height: 4em; /*Tamanho dos botões*/
+  font-size: 1.2em;/*Tamanho da fonte*/
+  background-color: #dbdbdb; /*Cor dos botões*/
+  cursor: pointer; /* se transforma em uma mão, indicando que o elemento pode ser clicado ou selecionado.*/
+}
+
+#buttons-container .number{
+  background-color: #f3f3f3; /*cor do botão*/
+}
+
+#buttons-container button:hover {
+  background-color: #DE6A04; /*Cor do botão fundo*/
+  border-color: #EB7005;/*Cor do botão externo*/
+}
+
+#buttons-container #equal-btn{
+  grid-column: span 2; /*espaçamento de duas colunas*/
+  background-color: #75a5cb; /*Cordo botão = */
+}
+
+#button-container #equal-btn:hover {
+  grid-column: span 2;
+  background-color: #3a91d8;
+}
